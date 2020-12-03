@@ -8,13 +8,14 @@ before_install:
 #  - docker run -e CI=true datasciencedotuniversity/dockeer-react npm run test
 deploy:
   provider: elasticbeanstalk
-  region: "eu-west-3"
-  app: "singleimage"
-  env: "Singleimage-env-1"
-  bucket_name: "elasticbeanstalk-eu-west-3-634261840555"
-  bucket_path: "singleimage"
+  region: "us-east-1"
+  app: "docker-test"
+  env: "DockerTest-env"
+  bucket_name: "elasticbeanstalk-us-east-1-634261840555"
+  bucket_path: "docker-test"
   on:
     branch: master
 
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRECT_KEY
+
