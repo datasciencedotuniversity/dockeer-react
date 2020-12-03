@@ -1,4 +1,4 @@
 git status
 git add .
-git commit -m "change added"
+git commit -m "Security group added"
 git push origin master
