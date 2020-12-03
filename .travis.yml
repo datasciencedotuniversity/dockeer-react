@@ -3,5 +3,18 @@ services:
   - docker
 before_install:
   - docker build -t datasciencedotuniversity/dockeer-react -f Dockerfile.dev .
-script:
-  - docker run datasciencedotuniversity/dockeer-react npm test -- --coverage
+#script:
+#  - docker run datasciencedotuniversity/dockeer-react npm test -- --coverage
+deploy:
+  provider: elasticbeamstalk
+  region: "eu-west-3"
+  app: "singleimage"
+  env: "Singleimage-env"
+  bucket_name: "elasticbeanstalk-eu-west-3-634261840555"
+  bucket_path: "singleimage"
+  on:
+    branch: master
+
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
