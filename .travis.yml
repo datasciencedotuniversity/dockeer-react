@@ -11,7 +11,7 @@ deploy:
   region: "eu-west-3"
   app: "singleimage"
   env: "Singleimage-env"
-  bucket_name: "arn:aws:s3:::elasticbeanstalk-eu-west-3-634261840555"
+  bucket_name: "elasticbeanstalk-eu-west-3-634261840555"
   bucket_path: "singleimage"
   on:
     branch: master
