@@ -2,6 +2,6 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t datasciencedotuniversity/dockeer-react -f Dokerfile.dev .
+  - docker build -t datasciencedotuniversity/docker-react -f Dokerfile.dev .
 script:
   - docker run datasciencedotuniversity/dockeer-react npm test -- --coverage
