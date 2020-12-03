@@ -7,7 +7,7 @@ before_install:
 #script:
 #  - docker run -e CI=true datasciencedotuniversity/dockeer-react npm run test
 deploy:
-  provider: elasticbeamstalk
+  provider: elasticbeanstalk
   region: "eu-west-3"
   app: "singleimage"
   env: "Singleimage-env-1"
